@@ -1,4 +1,3 @@
- // Работа с изображениями
  const imageCanvas = document.getElementById('imageCanvas');
  const imageCtx = imageCanvas.getContext('2d');
  let img;
@@ -8,7 +7,7 @@
      const reader = new FileReader();
      reader.onload = function(event) {
          img = new Image();
-         img.onload = drawImage; // Перерисовка при загрузке изображения
+         img.onload = drawImage; 
          img.src = event.target.result;
      };
      reader.readAsDataURL(file);
@@ -20,9 +19,9 @@
  }
 
  document.getElementById('resizeButton').addEventListener('click', () => {
-     imageCanvas.width = 200; // Изменяем ширину
-     imageCanvas.height = 150; // Изменяем высоту
-     drawImage(); // Перерисовываем
+     imageCanvas.width = 200; 
+     imageCanvas.height = 150; 
+     drawImage(); 
  });
 
  document.getElementById('saveButton').addEventListener('click', () => {
@@ -32,15 +31,13 @@
      link.click();
  });
 
- // Применение фильтра сепия
  document.getElementById('sepiaRange').addEventListener('input', (event) => {
      const sepiaValue = event.target.value;
      imageCtx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
-     imageCtx.filter = `sepia(${sepiaValue})`; // Применяем фильтр
+     imageCtx.filter = `sepia(${sepiaValue})`; 
      imageCtx.drawImage(img, 0, 0, imageCanvas.width, imageCanvas.height);
  });
 
- // Анимация
  const animationCanvas = document.getElementById('animationCanvas');
  const animationCtx = animationCanvas.getContext('2d');
  const hearts = []; 
@@ -63,8 +60,8 @@
  function animateHearts() {
      animationCtx.clearRect(0, 0, animationCanvas.width, animationCanvas.height);
      hearts.forEach((heart, index) => {
-         heart.y -= 1; // Двигаем сердечко вверх
-         if (heart.y + heart.size < 0) hearts.splice(index, 1); // Удаляем, если вышло за пределы
+         heart.y -= 1; 
+         if (heart.y + heart.size < 0) hearts.splice(index, 1); 
          drawHeart(animationCtx, heart.x, heart.y, heart.size);
      });
      requestAnimationFrame(animateHearts);
@@ -72,8 +69,8 @@
  animateHearts();
 
  document.getElementById('createHeartButton').addEventListener('click', () => {
-     const x = Math.random() * animationCanvas.width; // Случайная позиция по оси X
-     const y = animationCanvas.height; // Начальная позиция по оси Y
-     createHeart(x, y); // Создаем новое сердечко
+     const x = Math.random() * animationCanvas.width; 
+     const y = animationCanvas.height; 
+     createHeart(x, y); 
  });
 
