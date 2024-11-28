@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>кт3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" ></script>
+</head>
+<h1>AUDIO</h1>
+    <audio id="audioPlayer" controls>
+        <source src="audio/The_Weeknd_-_Dancing_In_The_Flames_78452297.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+    <h1>VIDEO</h1>
+    <video id="videoPlayer" controls width="400">
+        <source src="video/v10044g50000c6upof3c77u3me4nuap0.MP4" type="video/mp4">
+    </video>
+<h1>PICTURES</h1>
+<input type="file" id="imageInput" accept="image/*">
+<canvas id="imageCanvas" width="300" height="200"></canvas>
+<button id="resizeButton">Изменить размер</button>
+<button id="saveButton">Сохранить изображение</button>
+
+<div class="controls">
+    <label for="sepiaRange">фильтр сепия:</label>
+    <input type="range" id="sepiaRange" min="0" max="1" step="0.1" value="0">
+</div>
+<h1>ANIMATION</h1>
+<canvas id="animationCanvas" width="300" height="200"></canvas>
+<button id="createHeartButton">Создать сердечко</button>
+
+</html>

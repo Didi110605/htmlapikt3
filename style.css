@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(123, 136, 123);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    border: 2px solid #ccc; /* Установим границу для канвасов */
+    background-color: rgb(104, 128, 104); /* Белый фон для канвасов */
+}
+
+
+button {
+    background-color: #223b23; /* Зелёный фон для кнопок */
+    color: white; /* Белый текст */
+    padding: 10px 20px; /* Отступы вокруг текста */
+    margin: 5px; /* Отступ между кнопками */
+    border: none; /* Убираем стандартную границу */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s; /* Плавный переход для фона */
+}
+
+button:hover {
+    background-color: #45a049; /* Темнее при наведении */
+}
+
+h1 {
+    color: #333; /* Цвет заголовка */
+}
